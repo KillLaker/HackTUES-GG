@@ -6,22 +6,50 @@ public class Spawner : MonoBehaviour
 {
 public GameObject EnemyPrefab;
     public bool Alive;
+    private bool Delay = true;
     private GameObject EnemyInst;
+    private float starttime = 2f;
+    public float TimeInterval = 2f;
+
     private void Update()
     {
-        if (Alive)
+        if (!Alive)
         {
-            EnemyInst = Instantiate(EnemyPrefab, transform.position, Quaternion.identity);
-            Alive = false;
+            Delay=true;
+            WaitTime();
+            Alive = true;
         }
 
         if (EnemyInst == null)
         {
-            Alive = true;
+            Alive = false;
+        }
+    }
+
+    void WaitTime()
+    {
+        if (Delay)
+        {
+            
+            if (starttime <= 0f)
+            {
+                Delay = false;
+                Instantiation();
+                starttime=TimeInterval;
+            
+            }
+            else
+            {
+                starttime -= Time.deltaTime;
+            }
         }
 
     }
- 
+
+    void Instantiation()
+    {
+        EnemyInst = Instantiate(EnemyPrefab, transform.position, Quaternion.identity);
+    }
 }
 
 

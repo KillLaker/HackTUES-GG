@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 0}
-  Alive: 1
+  Alive: 0
+  TimeInterval: 2
