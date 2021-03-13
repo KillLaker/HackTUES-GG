@@ -18,7 +18,7 @@ private void Update()
 
             Destroy(this.gameObject);
             MainCamera.GetComponent<CameraFollow>().enabled = false;
-            SceneManager.LoadScene("Start Menu");
+            SceneManager.LoadScene("Game over");
         }
     }
 }
