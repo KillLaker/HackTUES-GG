@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9047549177648430723}
   - component: {fileID: 4822251964528822396}
+  - component: {fileID: 8054585122643600407}
   m_Layer: 0
   m_Name: Right
   m_TagString: KillPlayer
@@ -57,6 +58,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 1.5050883}
   m_EdgeRadius: 0
+--- !u!114 &8054585122643600407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564049765389433387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2655db44dc97e7c4b80aecc8b769283d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 2
+  timeInterval: 2
 --- !u!1 &583466318761748354
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +148,7 @@ GameObject:
   - component: {fileID: 6251322973544302245}
   m_Layer: 0
   m_Name: Enemy_Paper
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -319,7 +334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888797520384861164}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0.561, z: 0}
+  m_LocalPosition: {x: 0.028, y: 0.459, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 583466319225035017}
@@ -338,7 +353,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04960251, y: -0.33073997}
+  m_Offset: {x: 0.029579163, y: -0.33073997}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -349,7 +364,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2133865, y: 0.33852005}
+  m_Size: {x: 0.960022, y: 0.33852005}
   m_EdgeRadius: 0
 --- !u!114 &4505947579693667539
 MonoBehaviour:
@@ -364,6 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 583466319225035020}
+  isCan: 0
 --- !u!1 &4165638157270632293
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,6 +390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3848236366284354075}
   - component: {fileID: 7505474124792599861}
+  - component: {fileID: 5539514528344820778}
   m_Layer: 0
   m_Name: Left
   m_TagString: KillPlayer
@@ -421,3 +438,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 1.6077924}
   m_EdgeRadius: 0
+--- !u!114 &5539514528344820778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4165638157270632293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2655db44dc97e7c4b80aecc8b769283d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 2
+  timeInterval: 2
