@@ -31,14 +31,12 @@ public class EnemyMovement : MonoBehaviour
 
         if (coliderl.collider != null && !IsRight)
         {
-            Debug.Log(coliderr.collider);
             GetComponent<SpriteRenderer>().flipX = false;
             IsRight = true;
 
         }
         else if (coliderr.collider != null && IsRight)
         {
-            Debug.Log(coliderl.collider);
             GetComponent<SpriteRenderer>().flipX = true;
             IsRight = false;
 
